@@ -5,10 +5,13 @@ import usuarioRoutes from "./routes/usuarioRoutes.js";
 const app = express();
 
 // Definir puerto
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
+
+// Habilitar PUG
+app.set("view engine", "pug");
 
 // Routing
-app.use("/", usuarioRoutes);
+app.use("/auth", usuarioRoutes);
 
 // Arrancar la app
 app.listen(port, () => {
