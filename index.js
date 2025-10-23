@@ -7,6 +7,9 @@ const app = express();
 // Definir puerto
 const port = process.env.PORT || 3000;
 
+// Definir la carpeta publica
+app.use(express.static("public"));
+
 // Habilitar PUG
 app.set("view engine", "pug");
 
